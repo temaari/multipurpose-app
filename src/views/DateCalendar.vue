@@ -1,5 +1,5 @@
 <template>
-	<v-row class="fill-height">
+	<v-row class="fill-height pa-5">
 		<v-col>
 			<v-sheet height="64">
 				<v-toolbar
@@ -203,8 +203,10 @@ class DateIdea {
 
 				events.push(new DateIdea('Build a fort', 'Build a fort and watch movies',
 																				new Date("January 1, 2021 19:30:00")))
-				events.push(new DateIdea('Picnic', 'Pack a picnic and do a day trip',
-																				new Date("January 2, 2021 19:30:00")))
+				events.push(new DateIdea('Day Trip', 'Pack a picnic and do a day trip',
+																				new Date("February 12, 2021 7:00:00")))
+				events.push(new DateIdea('Day Trip', 'Pack a picnic and do a day trip',
+																				new Date("February 13, 2021 7:00:00")))
 				events.push(new DateIdea('Hike', 'Do a hike',
 																				new Date("January 3, 2021 19:30:00")))
 				events.push(new DateIdea('Movie Marathon', 'Movies to be decided',
@@ -222,11 +224,11 @@ class DateIdea {
 				events.push(new DateIdea('Putt Putt', 'Mini golf',
 																				new Date("January 10, 2021 19:30:00")))
 				events.push(new DateIdea('Markets', 'Go to one of the masrkets, Matakana, night markets etc... ',
-																				new Date("January 11, 2021 19:30:00")))
+																				new Date("January 23, 2021 7:00:00")))
 				events.push(new DateIdea('Explore', 'Find a new Park',
 																				new Date("January 12, 2021 19:30:00")))
-				events.push(new DateIdea('Sunset', 'Go watch the sunset with a meal',
-																				new Date("January 13, 2021 19:30:00")))
+				events.push(new DateIdea('Sunset', 'Go watch the sunset with a meal and do some sun gazing',
+																				new Date("February 6, 2021 19:30:00")))
 				events.push(new DateIdea('Quiz Night', 'Find some random quizzes',
 																				new Date("January 14, 2021 19:30:00")))
 				events.push(new DateIdea('Tree Adventures', 'Go do Tree adventures',
