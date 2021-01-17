@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Calculator.vue')
 	},
 	{
+		path: '/datecalendar',
+		name: 'DateCalendar',
+		component: () => import('../views/DateCalendar.vue')
+	},
+	{
 		path: '/about',
 		name: 'About',
 		component: () => import('../views/About.vue')
