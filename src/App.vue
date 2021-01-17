@@ -7,10 +7,10 @@
 			<v-list-item>
 				<v-list-item-content>
 					<v-list-item-title class="title">
-						Application
+						Ideas and inspiration
 					</v-list-item-title>
 					<v-list-item-subtitle>
-						subtext
+						Apps
 					</v-list-item-subtitle>
 				</v-list-item-content>
 			</v-list-item>
@@ -57,6 +57,7 @@
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Calculator', icon: 'mdi-calculator', to:'/calculator'},
+					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
 					{ title: 'About', icon: 'mdi-help-box', to:'/about'},
 				],
 			}),

@@ -1,14 +1,6 @@
 <template>
-	<div class="home">
-		This is the home
+	<div class="home pa-3">
+		<h1>Home App</h1>
+		<p>Hopefully I'll be able to create some pretty cool Apps and ideas</p>
 	</div>
 </template>
-
-<script>
-
-export default {
-	name: 'Home',
-	components: {
-	}
-}
-</script>

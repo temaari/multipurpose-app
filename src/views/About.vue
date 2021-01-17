@@ -1,5 +1,11 @@
 <template>
 	<div class="about pa-3">
-		<h1>This is an about page</h1>
+		<h1>About this App</h1>
+		<p>
+			This is an app where I can put all my app idea's
+			 or trials for it all in one app instead of having
+			 many repo's.<br><br>
+			All these app's will start off being developed using vue
+		</p>
 	</div>
 </template>

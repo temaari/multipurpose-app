@@ -1,5 +1,10 @@
 # multipurpose-app
 
+## About app
+```
+This is an app to place all my ideas for different SPA or trial out some ideas
+```
+
 ## Project setup
 ```
 npm install
