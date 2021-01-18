@@ -58,6 +58,7 @@
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Calculator', icon: 'mdi-calculator', to:'/calculator'},
 					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
+					{ title: 'Load HTML', icon: 'mdi-spider-web', to:'/loadhtml'},
 					{ title: 'About', icon: 'mdi-help-box', to:'/about'},
 				],
 			}),

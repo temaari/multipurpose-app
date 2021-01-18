@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/DateCalendar.vue')
 	},
 	{
+		path: '/loadhtml',
+		name: 'LoadHtml',
+		component: () => import('../views/LoadHtml.vue')
+	},
+	{
 		path: '/about',
 		name: 'About',
 		component: () => import('../views/About.vue')

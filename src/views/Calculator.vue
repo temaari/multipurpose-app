@@ -2,8 +2,8 @@
 	<div class="pa-3 pt-10" >
 		<div class="calculator pa-3">
 			<h1 class="pb-5" >Calculator</h1>
-			<input class="num pa-2" type="text" v-model="message" value="message"/>
-			<input class="num pa-2" type="number" v-model="number" value="number"/>
+			<input class="num pa-2" type="text" v-model="message" value="message" readonly="readonly"/>
+			<input class="num pa-2" type="number" v-model="number" value="number" readonly="readonly"/>
 			<br><br>
 			<div class="btn-num pa-2" v-for="num in 10" :key="num" >
 				<button v-if="num === 10" :id="num-1" class="btn pa-1" @click="clickNumBtn(0)" >0</button>
@@ -30,7 +30,6 @@ export default {
 			message: '',
 			operations: [],
 			number: 0,
-			sum: 0,
 			hasSum: false,
 		}
 	},
@@ -58,27 +57,26 @@ export default {
 			return sum
 		},
 		equal() {
-			let sum
+			let sum = 0
 			if (this.operations.length === 1) {
 				sum = this.calculate(this.operations[0].number, this.number, this.operations[0].opr)
 			} else if (this.operations.length > 1) {
 				for (let o in this.operations) {
-					console.log(o, this.operations.length, parseInt(o)+1)
-					if (this.operations.length === parseInt(o)+1) {
+					if (parseInt(o) === 0) {
+						sum = this.calculate(this.operations[o].number, this.operations[parseInt(o)+1].number, this.operations[o].opr)
+					} else if (parseInt(o)+1 === this.operations.length) {
 						sum = this.calculate(sum, this.number, this.operations[o].opr)
 					} else {
-						sum = this.calculate(this.operations[o].number, this.operations[parseInt(o)+1].number, this.operations[o].opr)
+						sum = this.calculate(sum, this.operations[parseInt(o)+1].number, this.operations[o].opr)
 					}
 				}
 			}
 			this.message = this.message + this.number.toString() + ' = ' + sum
-			this.sum = sum
 			this.number = 0
 		},
 		clear() {
 			this.message = ''
 			this.number = 0
-			this.sum = 0
 			this.operations = []
 		},
 	}
@@ -88,6 +86,7 @@ export default {
 <style>
 	.calculator {
 		border: 1px solid black;
+		width: 500px;
 	}
 	.btn {
 		border: 1px solid black;
