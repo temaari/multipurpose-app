@@ -21,9 +21,14 @@ const routes = [
 		component: () => import('../views/DateCalendar.vue')
 	},
 	{
-		path: '/loadhtml',
-		name: 'LoadHtml',
-		component: () => import('../views/LoadHtml.vue')
+		path: '/formio',
+		name: 'FormIO',
+		component: () => import('../views/FormIO.vue')
+	},
+	{
+		path: '/redirect',
+		name: 'Redirect',
+		component: () => import('../views/Redirect.vue')
 	},
 	{
 		path: '/about',

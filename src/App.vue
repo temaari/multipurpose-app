@@ -10,7 +10,7 @@
 						Ideas and inspiration
 					</v-list-item-title>
 					<v-list-item-subtitle>
-						Apps
+						Apps for Learning
 					</v-list-item-subtitle>
 				</v-list-item-content>
 			</v-list-item>
@@ -58,7 +58,8 @@
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Calculator', icon: 'mdi-calculator', to:'/calculator'},
 					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
-					{ title: 'Load HTML', icon: 'mdi-spider-web', to:'/loadhtml'},
+					{ title: 'Form IO', icon: 'mdi-form-select', to:'/formio'},
+					{ title: 'Redirect Options', icon: 'mdi-directions', to:'/redirect'},
 					{ title: 'About', icon: 'mdi-help-box', to:'/about'},
 				],
 			}),

@@ -1,6 +1,6 @@
 <template>
 	<div class="about pa-3">
-		<h1>About this App</h1>
+		<h1 id="about" >About this App</h1>
 		<p>
 			This is an app where I can put all my app idea's
 			 or trials for it all in one app instead of having
