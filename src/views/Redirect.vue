@@ -4,6 +4,14 @@
 			<h1>Please Select the way you want to redirect</h1>
 		</div><br> 
 		<div class="card pa-2" >
+			<label class="title pa-2" for="link">Redirect On Same Page</label><br>
+			<a  class="pa-2" href="#goto" name="link" >Go to a single point on the page</a>
+		</div><br>
+		<div class="card pa-2" >
+			<label class="title pa-2" for="link">Redirect On To Point on another page</label><br>
+			<a  class="pa-2" href="http://localhost:8080/about#about" name="link" >Go to a single point on another page</a>
+		</div><br>
+		<div class="card pa-2" >
 			<label class="title pa-2" for="replace">Redirect by Replace</label>
 			<p class="pa-2" >Replace the url so you can't come back to this page</p>
 			<button class="btn pa-2" name="replace" @click="redirect('replace')" >Click me</button><br>
@@ -22,14 +30,6 @@
 			<label class="title pa-2" for="query">Redirect by query</label>
 			<p class="pa-2" >Go to url with some Query String</p>
 			<button class="btn pa-2" name="query" @click="redirect('query')" >Click me</button><br>
-		</div><br>
-		<div class="card pa-2" >
-			<label class="title pa-2" for="link">Redirect On Same Page</label><br>
-			<a  class="pa-2" href="#goto" name="link" >Go to a single point on the page</a>
-		</div><br>
-		<div class="card pa-2" >
-			<label class="title pa-2" for="link">Redirect On To Point on another page</label><br>
-			<a  class="pa-2" href="http://localhost:8080/about#about" name="link" >Go to a single point on another page</a>
 		</div><br>
 		<br v-for="i in 20" :key="i" >
 		<div><p id="goto" >Hello this is the point on the page.<br>Powered by Christian Te Maari</p></div>

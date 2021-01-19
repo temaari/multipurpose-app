@@ -56,6 +56,7 @@
 			drawer: null,
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
+					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
 					{ title: 'Calculator', icon: 'mdi-calculator', to:'/calculator'},
 					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
 					{ title: 'Form IO', icon: 'mdi-form-select', to:'/formio'},

@@ -11,6 +11,11 @@ const routes = [
 		component: Home
 	},
 	{
+		path: '/todo',
+		name: 'Todo',
+		component: () => import('../views/Todo.vue')
+	},
+	{
 		path: '/calculator',
 		name: 'Calculator',
 		component: () => import('../views/Calculator.vue')
