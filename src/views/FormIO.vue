@@ -42,7 +42,7 @@ export default {
 	methods: {
 		confirm() {
 			alert("Well done")
-			location.replace("http://localhost:8080", '_blank')
+			location.replace("http://localhost:8080")
 		},
 		cancel() {
 			this.fname = ''

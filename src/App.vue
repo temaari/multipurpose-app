@@ -60,6 +60,7 @@
 					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
 					{ title: 'Form IO', icon: 'mdi-form-select', to:'/formio'},
 					{ title: 'Redirect Options', icon: 'mdi-directions', to:'/redirect'},
+					{ title: 'Never Open', icon: 'mdi-directions', to:'/neveropen'},
 					{ title: 'About', icon: 'mdi-help-box', to:'/about'},
 				],
 			}),

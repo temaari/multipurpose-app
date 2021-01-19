@@ -31,6 +31,11 @@ const routes = [
 		component: () => import('../views/Redirect.vue')
 	},
 	{
+		path: '/neveropen',
+		name: 'NeverOpen',
+		component: () => import('../views/NeverOpen.vue')
+	},
+	{
 		path: '/about',
 		name: 'About',
 		component: () => import('../views/About.vue')

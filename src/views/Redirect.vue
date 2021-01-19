@@ -40,21 +40,17 @@
 
 export default {
 	name: 'formIO',
-	data() {
-		return {
-			url: 'http://localhost:8080'
-		}
-	},
 	methods: {
 		redirect(option) {
+			let url = 'http://localhost:8080'
 			if (option === 'replace') {
-				location.replace(this.url)
+				location.replace(url)
 			} else if (option === 'href') {
-				location.href = this.url
+				location.href = url
 			} else if (option === 'open') {
-				open(this.url, '_blank')
+				open(url, '_blank')
 			} else if (option === 'query') {
-				location.href = this.url + "?name=christian&age=24&comment=coding is cool"
+				location.href = url + "?name=christian&age=24&comment=coding is cool"
 			}
 		},
 	},
