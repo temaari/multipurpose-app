@@ -16,6 +16,16 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/ItemPicker',
+		name: 'ItemPicker',
+		component: () => import('../views/ItemPicker.vue')
+	},
+	{
+		path: '/RefreshComponents',
+		name: 'RefreshComponents',
+		component: () => import('../views/RefreshComponents.vue')
+	},
+	{
 		path: '/calculator',
 		name: 'Calculator',
 		component: () => import('../views/Calculator.vue')

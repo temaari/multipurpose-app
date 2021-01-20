@@ -57,6 +57,8 @@
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
+					{ title: 'Item Picker', icon: 'mdi-guitar-pick', to: '/itempicker' },
+					{ title: 'Refresh Components', icon: 'mdi-language-html5', to: '/refreshcomponents' },
 					{ title: 'Calculator', icon: 'mdi-calculator', to:'/calculator'},
 					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
 					{ title: 'Form IO', icon: 'mdi-form-select', to:'/formio'},
