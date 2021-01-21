@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import RandomGenerator from '../Components/RandomGenerator'
+	import RandomGenerator from '../components/RandomGenerator'
 	export default {
 		name: 'RefreshComponents',
 		data() {

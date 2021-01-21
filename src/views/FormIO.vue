@@ -16,13 +16,13 @@
 			<input class="form pa-2" name="age" type="text" v-model="age" />
 		</div>
 		<div class="pa-2" >
-			<span v-if="fname !== ''" >Hello there, {{ fname }}</span>
-			<span v-if="lname !== ''" >{{ lname }}</span><br>
-			<span v-if="age > 0" >You are {{ age }} years old so this year you will be {{ parseInt(age)+1 }} years old</span>
+			<span v-show="fname !== ''" >Hello there, {{ fname }}</span>
+			<span v-show="lname !== ''" >{{ lname }}</span><br>
+			<span v-show="age > 0" >You are {{ age }} years old so this year you will be {{ parseInt(age)+1 }} years old</span>
 		</div>
 		<div class="pa-2" >
-			<button v-if="showButton" class="btn btn-conform pa-2" @click="confirm()" >Confirm</button><br>
-			<button v-if="showButton" class="btn btn-cancel pa-2" @click="cancel()" >Cancel</button>
+			<button v-show="showButton" class="btn btn-conform pa-2" @click="confirm()" >Confirm</button><br>
+			<button v-show="showButton" class="btn btn-cancel pa-2" @click="cancel()" >Cancel</button>
 		</div>
 	</div>
 </template>
