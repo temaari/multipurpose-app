@@ -1,6 +1,6 @@
 <template>
 	<div class="item-picker pa-3">
-		<div><h1 id="title" ></h1></div>
+		<div><h1 id="title" ></h1></div><br>
 		<div>
 			<label for="add">Add in your options: </label><br>
 			<input class="add pa-2" type="text" v-model="option" placeholder="Item Option" v-on:keyup.enter="add()" />
@@ -8,12 +8,7 @@
 			<div v-if="isAddError" class="error" >Please enter a valid input</div>
 		</div><br>
 		<div v-if="items.length > 0" >
-			<div><h2>Your item picked, should you choose to accept: <span id="picked" ></span></h2></div><br>
-			<div v-if="buttonCount !== 10" >
-				<button class="btn btn-block" @click="randomPick()" >
-					Click me {{ buttonCount }} of 10
-				</button><br><br>
-			</div>
+			<h2>Your item picked, should you choose to accept: <span id="picked" ></span></h2><br>
 			<div v-if="item.isShown" v-for="item in items" >
 				<v-container class="grey lighten-5">
 					<v-row no-gutters>
@@ -37,8 +32,16 @@
 					</v-row>
 				</v-container>
 			</div><br>
-			<button class="btn btn-block" @click="clear()" >Clear</button><br><br>
-			<button class="btn btn-block" v-if="buttonCount === 10" @click="reset()" >Reset</button>
+			<div>
+				<div v-if="buttonCount !== 10" >
+					<button class="btn btn-block" @click="odds()" >Beat the Odds {{ buttonCount }} of 10</button><br><br>
+					<button class="btn btn-block" @click="randomPick()" >One Time click</button><br><br>
+				</div>
+				<div v-else >
+					<button class="btn btn-block" @click="reset()" >Reset</button><br><br>
+				</div>
+				<button class="btn btn-block" @click="clear()" >Clear</button>
+			</div>
 		</div>
 	</div>
 </template>
@@ -88,11 +91,22 @@
 					this.isAddError = true
 				}
 			},
-			randomPick() {
+			odds() {
 				let number = RandomGenerator.methods.getRandomNumber(this.items.length)
 				this.items[number].count += 1
 				this.buttonCount += 1
 				if (this.buttonCount === 10) this.pickitem()
+			},
+			randomPick() {
+				let number = RandomGenerator.methods.getRandomNumber(this.items.length)
+				document.getElementById("picked").innerText = this.items[number].title
+				this.buttonCount = 10
+				// Only show picked item
+				this.items.forEach( (item => {
+					if (item.id !== this.items[number].id) {
+						item.isShown = false
+					}
+				}))
 			},
 			reset() {
 				this.buttonCount = 0
