@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/ItemPicker.vue')
 	},
 	{
+		path: '/Munchkin',
+		name: 'Munchkin',
+		component: () => import('../views/Munchkin.vue')
+	},
+	{
 		path: '/RefreshComponents',
 		name: 'RefreshComponents',
 		component: () => import('../views/RefreshComponents.vue')

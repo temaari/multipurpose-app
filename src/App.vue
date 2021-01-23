@@ -58,6 +58,7 @@
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
 					{ title: 'Item Picker', icon: 'mdi-guitar-pick', to: '/itempicker' },
+					{ title: 'Munchkin Game Counter', icon: 'mdi-controller-classic', to: '/munchkin' },
 					{ title: 'Refresh Components', icon: 'mdi-language-html5', to: '/refreshcomponents' },
 					{ title: 'Calculator', icon: 'mdi-calculator', to:'/calculator'},
 					{ title: 'Date Calendar', icon: 'mdi-calendar', to:'/datecalendar'},
