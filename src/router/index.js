@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/FlappyBird',
+		name: 'FlappyBird',
+		component: () => import('../views/FlappyBird.vue')
+	},
+	{
 		path: '/Parent',
 		name: 'Parent',
 		component: () => import('../views/Parent.vue')
