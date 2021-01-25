@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/FlappyBird.vue')
 	},
 	{
+		path: '/Vuetifier',
+		name: 'Vuetifier',
+		component: () => import('../views/Vuetifier.vue')
+	},
+	{
 		path: '/Parent',
 		name: 'Parent',
 		component: () => import('../views/Parent.vue')

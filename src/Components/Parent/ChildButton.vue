@@ -5,6 +5,7 @@
 			class="pa-1"
 			type="text"
 			v-model="value"
+			@keyup.enter="updateValue(value)"
 		/><br>
 		<button class="pa-1" @click="updateValue(value)" >Click me</button>
 	</div>

@@ -1,7 +1,7 @@
 <template>
 	<div class="pa-2" >
 		<p>Click button to change parent value</p>
-		<button class="pa-1" @click="updateValue('hello there' + count)" >Click me</button>
+		<button class="pa-1" @click="updateValue('hello there ' + count)" >Click me</button>
 	</div>
 </template>
 
