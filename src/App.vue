@@ -57,6 +57,7 @@
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
+					{ title: 'Parent & Child', icon: 'mdi-family-tree', to: '/parent' },
 					{ title: 'Item Picker', icon: 'mdi-guitar-pick', to: '/itempicker' },
 					{ title: 'Munchkin Game Counter', icon: 'mdi-controller-classic', to: '/munchkin' },
 					{ title: 'Refresh Components', icon: 'mdi-language-html5', to: '/refreshcomponents' },

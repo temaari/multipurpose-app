@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Parent',
+		name: 'Parent',
+		component: () => import('../views/Parent.vue')
+	},
+	{
 		path: '/ItemPicker',
 		name: 'ItemPicker',
 		component: () => import('../views/ItemPicker.vue')
