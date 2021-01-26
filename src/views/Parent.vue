@@ -13,6 +13,11 @@
 		<div>Parent Value 2: {{ due }}</div>
 		<due-button v-model="update" />
 		<v-divider class="pa-2" ></v-divider>
+		<div>Parent Value 1: {{ uno }}</div>
+		<div>Multiple Input: {{ myObject['first'] }}</div>
+		<div>Multiple Input: {{ myObject['last'] }}</div>
+		<multiple-input v-model="update" />
+		<v-divider class="pa-2" ></v-divider>
 	</div>
 </template>
 
@@ -21,6 +26,8 @@
 	import ChildButton from '../components/Parent/ChildButton'
 	import ButtonOnly from '../components/Parent/ButtonOnly'
 	import DueButton from '../components/Parent/DueButton'
+	import MultipleInput from '../components/Parent/MultipleInput'
+
 	export default {
 		data() {
 			return {
@@ -29,19 +36,21 @@
 				button: '',
 				uno: '',
 				due: '',
-				update: {}
+				update: {},
+				myObject: {},
 			}
 		},
 		watch: {
 			update: function(x) {
-				this[x.name] = x.value
-			}
+				!x['object'] ? this[x.name] = x.value : this[x.object][x.name] = x.value
+			},
 		},
 		components: {
 			ChildInput: ChildInput,
 			ChildButton: ChildButton,
 			ButtonOnly: ButtonOnly,
 			DueButton: DueButton,
+			MultipleInput: MultipleInput,
 		}
 	}
 </script>
