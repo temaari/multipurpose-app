@@ -60,6 +60,7 @@
 					{ title: 'Vuetifier', icon: 'mdi-vuetify', to: '/Vuetifier' },
 					{ title: 'FlappyBird', icon: 'mdi-controller-classic', to: '/FlappyBird' },
 					{ title: 'Parent & Child', icon: 'mdi-family-tree', to: '/parent' },
+					{ title: 'Computed', icon: 'mdi-desktop-classic', to: '/Computed' },
 					{ title: 'Item Picker', icon: 'mdi-guitar-pick', to: '/itempicker' },
 					{ title: 'Munchkin Game Counter', icon: 'mdi-controller-classic', to: '/munchkin' },
 					{ title: 'Refresh Components', icon: 'mdi-language-html5', to: '/refreshcomponents' },

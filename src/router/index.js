@@ -31,6 +31,11 @@ const routes = [
 		component: () => import('../views/Parent.vue')
 	},
 	{
+		path: '/Computed',
+		name: 'Computed',
+		component: () => import('../views/Computed.vue')
+	},
+	{
 		path: '/ItemPicker',
 		name: 'ItemPicker',
 		component: () => import('../views/ItemPicker.vue')

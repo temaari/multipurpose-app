@@ -19,22 +19,35 @@
 			v-model="name"
 			v-on:input="updateValue({name: 'last', value: name, object:'myObject'})"
 		/>
+		<br><br>
+		<child-input v-model="child" />
+		{{child}}
 	</div>
 </template>
 
 <script>
+	import ChildInput from "./ChildInput";
 	export default {
 		data() {
 			return {
+				child: '',
 				input: '',
 				name: '',
 				val: '',
+			}
+		},
+		watch: {
+			child: function(x) {
+				this.updateValue({name: 'inputValue', value: x})
 			}
 		},
 		methods: {
 			updateValue: function (value) {
 				this.$emit('input', value);
 			}
+		},
+		components: {
+			ChildInput: ChildInput,
 		}
 	}
 </script>
