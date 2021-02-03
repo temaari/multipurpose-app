@@ -57,6 +57,7 @@
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
+					{ title: 'Toggle Environment', icon: 'mdi-toggle-switch', to: '/ToggleProd' },
 					{ title: 'Vuetifier', icon: 'mdi-vuetify', to: '/Vuetifier' },
 					{ title: 'FlappyBird', icon: 'mdi-controller-classic', to: '/FlappyBird' },
 					{ title: 'Parent & Child', icon: 'mdi-family-tree', to: '/parent' },

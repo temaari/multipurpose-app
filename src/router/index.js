@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/FlappyBird.vue')
 	},
 	{
+		path: '/ToggleProd',
+		name: 'ToggleProd',
+		component: () => import('../views/ToggleProd.vue')
+	},
+	{
 		path: '/Vuetifier',
 		name: 'Vuetifier',
 		component: () => import('../views/Vuetifier.vue')
