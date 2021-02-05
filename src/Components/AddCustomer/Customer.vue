@@ -20,14 +20,14 @@ export default {
 		}
 	},
 	mounted() {
-		this.id = this.elementId.id
-		this.firstName = this.elementId.firstName != null ? this.elementId.firstName : ''
-		this.lastName = this.elementId.lastName != null ? this.elementId.lastName : ''
-		this.age = this.elementId.age != null ? this.elementId.age : 0
-		this.gender = this.elementId.gender != null ? this.elementId.gender : ''
+		this.id = this.customer.id
+		this.firstName = this.customer.firstName != null ? this.customer.firstName : ''
+		this.lastName = this.customer.lastName != null ? this.customer.lastName : ''
+		this.age = this.customer.age != null ? this.customer.age : 0
+		this.gender = this.customer.gender != null ? this.customer.gender : ''
 	},
 	props: {
-		elementId: Object,
+		customer: Object,
 	},
 	watch: {
 		firstName : function (data) {
@@ -54,7 +54,7 @@ export default {
 		}
 	},
 	props: {
-		elementId: Number,
+		customer: Number,
 	},
 }
 </script>

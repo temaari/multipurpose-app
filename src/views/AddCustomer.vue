@@ -2,8 +2,8 @@
 	<div class="pa-3" >
 		<h2>Add Another Customer</h2>
 		<v-divider class="pa-2" ></v-divider>
-		<div v-for="customer in customers" >
-				<customer :element-id="customer" v-model="update" ></customer>
+		<div id="customers" v-for="customer in customers" >
+				<customer :customer="customer" v-model="update" ></customer>
 				<v-btn @click="remove(customer.id)" v-if="customers.length > 1" block >Remove {{customer.id}}</v-btn>
 				<v-divider class="pa-2" ></v-divider>
 		</div><br>
@@ -18,8 +18,11 @@
 		data() {
 			return {
 				update: {},
-				customers: [{ id: Date.now() }],
+				customers: [],
 			}
+		},
+		mounted() {
+			this.add()
 		},
 		watch: {
 			update: function (data) {
@@ -32,10 +35,11 @@
 		},
 		methods: {
 			add() {
-				this.customers.push({ id: Date.now() })
+				let newCustomer = { id: Date.now() }
+				this.customers.push(newCustomer)
 			},
 			remove(id) {
-				this.customers = this.customers.filter(customer => customer.id !== id)
+				this.customers = this.customers.filter(customer => customer.id != id)
 			}
 		},
 		components: {
@@ -45,7 +49,4 @@
 </script>
 
 <style scoped>
-	button {
-
-	}
 </style>
