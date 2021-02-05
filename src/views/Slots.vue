@@ -39,6 +39,12 @@
 				</template>
 			</current-user><br>
 
+			<custom-component>
+				<template v-slot:custom>
+					<div>This is some custom HTML to go in</div>
+				</template>
+			</custom-component>
+
 			<template v-slot:footer>
 				<v-divider class="pa-2" ></v-divider>
 				<p><a :href="url" target="_blank" >Learn more About slots</a> | <a href="#">Go back to the top</a></p>
@@ -51,6 +57,7 @@
 	import NavigationLink from "../components/Slots/NavigationLink"
 	import BaseLayout from "../components/Slots/BaseLayout"
 	import CurrentUser from '../components/Slots/CurrentUser'
+	import CustomComponent from '../components/Slots/CustomComponent'
 
 	export default {
 		data() {
@@ -63,6 +70,7 @@
 			NavigationLink: NavigationLink,
 			BaseLayout: BaseLayout,
 			CurrentUser: CurrentUser,
+			CustomComponent: CustomComponent,
 		},
 	}
 </script>

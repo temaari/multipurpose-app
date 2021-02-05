@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<p>This is using some slotProps</p>
 		<span>
 			<slot v-bind:user="user" >
 				{{ user.firstname }}
