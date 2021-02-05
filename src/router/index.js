@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/FlappyBird.vue')
 	},
 	{
+		path: '/AddCustomer',
+		name: 'AddCustomer',
+		component: () => import('../views/AddCustomer.vue')
+	},
+	{
 		path: '/Slots',
 		name: 'Slots',
 		component: () => import('../views/Slots.vue')
