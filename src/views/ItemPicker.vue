@@ -87,9 +87,7 @@
 						isShown: true,
 					})
 					this.option = ''
-				} {
-					this.isAddError = true
-				}
+				} else this.isAddError = true
 			},
 			odds() {
 				let number = RandomGenerator.methods.getRandomNumber(this.items.length)
