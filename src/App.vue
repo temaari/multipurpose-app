@@ -57,6 +57,7 @@
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
+					{ title: 'Calendar Picker', icon: 'mdi-calendar', to: '/CalendarPicker' },
 					{ title: 'Add Customer', icon: 'mdi-account-plus', to: '/AddCustomer' },
 					{ title: 'Vue Slots', icon: 'mdi-slot-machine', to: '/Slots' },
 					{ title: 'Toggle Environment', icon: 'mdi-toggle-switch', to: '/ToggleProd' },

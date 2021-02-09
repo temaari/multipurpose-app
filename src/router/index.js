@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/FlappyBird.vue')
 	},
 	{
+		path: '/CalendarPicker',
+		name: 'CalendarPicker',
+		component: () => import('../views/CalendarPicker.vue')
+	},
+	{
 		path: '/AddCustomer',
 		name: 'AddCustomer',
 		component: () => import('../views/AddCustomer.vue')
