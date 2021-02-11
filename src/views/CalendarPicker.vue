@@ -2,36 +2,35 @@
 	<div class="pa-3" >
 		<h1>Calendar Picker</h1>
 		<v-divider class="pa-2" ></v-divider>
-		<h3>Date Picker 'vue2-datepicker'</h3>
-		<v-divider class="pa-2" ></v-divider>
-		<date-picker
-			v-model="date"
-			type="date"
-			:disabled-date="disabledDates"
-			format="DD/MM/YYYY"
-			title-format="DD/MM/YYYY"
-			placeholder="DD/MM/YYYY"
-		/>
-		<div><a href="https://www.npmjs.com/package/vue2-datepicker" target="_blank" >vue2-datepicker Docs</a></div>
-		<br>
 
-		<h3>Date Picker 'vue-datepicker-local'</h3>
-		<v-divider class="pa-2" ></v-divider>
-		<vue-datepicker-local v-model="time" :disabledDate="disabledDates" />
-		<div><a href="https://www.npmjs.com/package/vue-datepicker-local" target="_blank" >vue-datepicker-local Docs</a></div>
-		<br>
+		<div>
+			<h3>Date Picker 'vue2-datepicker'</h3>
+			<v-divider class="pa-2" ></v-divider>
+			<date-picker
+				v-model="date"
+				type="date"
+				:disabled-date="disabledDates"
+				format="DD/MM/YYYY"
+				title-format="DD/MM/YYYY"
+				placeholder="dd/mm/yyyy"
+			/>
+			<div><a href="https://www.npmjs.com/package/vue2-datepicker" target="_blank" >vue2-datepicker Docs</a></div><br>
+		</div>
 
-		<h3>Date Picker 'vuejs-datepicker'</h3>
-		<v-divider class="pa-2" ></v-divider>
-		<datepicker
-			class="date-picker"
-			v-model="datepick"
-			:disabled-dates="disabledDate"
-		>
-		</datepicker>
-		<div><a href="https://www.npmjs.com/package/vuejs-datepicker" target="_blank" >vuejs-datepicker Docs</a></div>
-		<br>
-	</div>
+		<div>
+			<h3>Date Picker 'vue-datepicker-local'</h3>
+			<v-divider class="pa-2" ></v-divider>
+			<vue-datepicker-local v-model="time" :disabledDate="disabledDates" />
+			<div><a href="https://www.npmjs.com/package/vue-datepicker-local" target="_blank" >vue-datepicker-local Docs</a></div><br>
+		</div>
+
+		<div>
+			<h3>Date Picker 'vuejs-datepicker'</h3>
+			<v-divider class="pa-2" ></v-divider>
+			<datepicker v-model="datepick" :disabled-dates="disabledDate" />
+			<div><a href="https://www.npmjs.com/package/vuejs-datepicker" target="_blank" >vuejs-datepicker Docs</a></div>
+		</div>
+		</div>
 </template>
 
 <script>

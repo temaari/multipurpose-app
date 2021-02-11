@@ -56,7 +56,7 @@
 			drawer: null,
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
-					{ title: 'Tester', icon: 'mdi-test-tube', to: '/Tester' },
+					{ title: 'Study', icon: 'mdi-school', to: '/Study' },
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
 					{ title: 'Calendar Picker', icon: 'mdi-calendar', to: '/CalendarPicker' },
 					{ title: 'Add Customer', icon: 'mdi-account-plus', to: '/AddCustomer' },
