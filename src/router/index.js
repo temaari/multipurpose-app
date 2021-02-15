@@ -16,9 +16,9 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
-		path: '/Interpreter',
-		name: 'Interpreter',
-		component: () => import('../views/Interpreter.vue')
+		path: '/InputSelecter',
+		name: 'InputSelecter',
+		component: () => import('../views/InputSelecter.vue')
 	},
 	{
 		path: '/Study',

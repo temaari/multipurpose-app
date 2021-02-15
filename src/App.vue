@@ -57,7 +57,7 @@
 			items: [
 					{ title: 'Home', icon: 'mdi-home', to:'/'},
 					{ title: 'Study', icon: 'mdi-school', to: '/Study' },
-					{ title: 'Interpreter', icon: 'mdi-translate', to: '/Interpreter' },
+					{ title: 'Input Selecter', icon: 'mdi-form-select', to: '/InputSelecter' },
 					{ title: 'Todo', icon: 'mdi-format-list-checks', to: '/todo' },
 					{ title: 'Calendar Picker', icon: 'mdi-calendar', to: '/CalendarPicker' },
 					{ title: 'Add Customer', icon: 'mdi-account-plus', to: '/AddCustomer' },
