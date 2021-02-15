@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/InputSelecter.vue')
 	},
 	{
+		path: '/WebsiteBuilder',
+		name: 'WebsiteBuilder',
+		component: () => import('../views/WebsiteBuilder.vue')
+	},
+	{
 		path: '/Study',
 		name: 'Study',
 		component: () => import('../views/Study.vue')
