@@ -1,7 +1,12 @@
 <template>
 <div>
-	<div id="header"><slot name="header"><div>Header</div></slot></div>
-	<div :id="element['id']" v-for="(element, i) in elements" :key="i"><slot :name="'main_' + element['id']"><div>Enter your code here</div></slot></div>
+	<div id="header"><slot name="header"><div>Header</div></slot></div><br>
+	<div :id="element['id']" v-for="(element, i) in elements" :key="i">
+		<v-divider class="pa-2"></v-divider>
+		<slot :name="'main_' + element['id']">
+			<div>Enter your code here</div><br v-for="(x,i) in 10" :key="i">
+		</slot>
+	</div>
 	<div id="footer"><slot name="footer"><div>Footer</div></slot></div>
 </div>
 </template>
