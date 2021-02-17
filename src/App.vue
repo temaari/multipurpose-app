@@ -46,10 +46,6 @@
 		</v-app-bar>
 
 		<v-main>
-			<div class="pa-10">
-				<p>Don't forget to create the mall app</p>
-				<p>A place where people come and scroll through stores</p>
-			</div>
 			<router-view></router-view>
 			<v-btn v-if="isHomePage()" block rounded @click="isProd=!isProd">Edit Page</v-btn>
 		</v-main>
