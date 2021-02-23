@@ -3,10 +3,17 @@
 		<h1>Convert CSV to JSON</h1>
 		<v-divider class="pa-2" ></v-divider>
 		<div>
-			<textarea id="csv" type="text" style="border: 1px solid black; width: 50%; height: 200px; position:absolute;" @input="getText()" placeholder="name,age"></textarea>
-		</div><br><br><br><br><br><br><br><br><br><br>
-		<button @click="convertCsvToJson(file)">Convert {{ file }} CSV to JSON</button>
-		<div><p id="json"></p></div>
+			<button @click="defaultData(file)">Convert Default CSV to JSON</button>
+			<button @click="clear()">Clear</button>
+		</div>
+		<v-divider class="pa-3" ></v-divider>
+		<div class="text">
+			<textarea
+				id="csv" type="text" @input="getText()"
+				:placeholder="'header1,header2,etc \nparam1,param2,etc'">
+			</textarea>
+		</div>
+		<div class="result"><p id="json"></p></div>
 	</div>
 </template>
 
@@ -14,43 +21,87 @@
 	export default {
 		data: () => {
 			return {
-				file: "name,age\n"
-					+ "Christian,25\n"
-					+ "Briana,20\n"
-					+ "Bobby,21\n"
-					+ "Mando,50\n"
-					+ "Luke,400",
-				data: [],
+				file: "name,age,gender\n"
+					+ "Christian,25.5,M\n"
+					+ "Briana,20,F\n"
+					+ "Bobby,21,M\n"
+					+ "Mando,50,M\n"
+					+ "Luke,400,M",
 			}
 		},
 		methods: {
+			clear() {
+				document.getElementById('json').innerText = null
+			},
 			getText() {
-				this.convertCsvToJson(document.getElementById('csv').value)
+				document.getElementById('json').innerText = this.convertCsvToJson(document.getElementById('csv').value)
+			},
+			defaultData(data) {
+				document.getElementById('json').innerText = this.convertCsvToJson(data)
 			},
 			convertCsvToJson(input) {
-				this.data = []
-
 				let rows = input.split('\n')
-				rows.forEach((row, count) => {
-					if (count > 0)
-						this.data.push({ "name": row.split(',')[0], "age": row.split(',')[1] }) 
-				})
 
 				let jsonText = "["
-				this.data.forEach((el, count) => {
-					jsonText = jsonText + "\n{\n \"name\": " + "\"" + el['name'] + "\"" + ","
-					jsonText = jsonText + "\n \"age\": " + el['age'] + "\n}"
-					if (count !== this.data.length-1) {
-						jsonText = jsonText + ","
+				rows.forEach((row, count) => {
+					if (count > 0) {
+						jsonText = jsonText + "\n \f {"
+
+						row.split(',').forEach((param, i) => {
+							jsonText = jsonText + "\n \f \f \""
+							jsonText = jsonText + rows[0].split(',')[i]
+							jsonText = jsonText + "\": "
+							jsonText = jsonText + (Number.isInteger(parseInt(param)) ? param : "\"" + param + "\"")
+							if (i !== row.split(',').length-1)
+								jsonText = jsonText + ","
+						})
+
+						jsonText = jsonText + "\n \f }"
+						if (count !== rows.length-1)
+							jsonText = jsonText + ","
 					}
 				})
 				jsonText = jsonText + "\n]"
-				document.getElementById('json').innerText = jsonText
+
+
+				return jsonText
 			},
 		},
 	}
 </script>
 
-<style>
-
+<style scoped>
+	button {
+		border: 1px solid black;
+		width: 100%;
+		height: 40px;
+		background: green;
+		color: black;
+		margin-bottom: 10px;
+	}
+	textarea {
+		width: 100%;
+		height: 100%;
+		padding:2px;
+		resize: none;
+	}
+	#json {
+		height: auto;
+	}
+	.text {
+		width: 50%;
+		height: 200px;
+		float: left;
+		left: 0;
+		padding-right: 10px;
+		border: 1px dotted black;
+	}
+	.result {
+		width: 50%;
+		height: auto;
+		float: right;
+		right: 0;
+		padding-left: 10px;
+		border: 1px dotted black;
+	}
 </style>
