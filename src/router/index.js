@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Convert',
+		name: 'Convert',
+		component: () => import('../views/ConvertCSVToJSON.vue')
+	},
+	{
 		path: '/InputSelecter',
 		name: 'InputSelecter',
 		component: () => import('../views/InputSelecter.vue')
