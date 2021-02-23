@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-3" >
+	<div class="pa-16" >
 		<div><h1>Toggle Prod and test Environment</h1></div>
 		<div><button @click="toggleEnv()" >
 			<span>

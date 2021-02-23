@@ -1,5 +1,5 @@
 <template>
-	<div class="item-picker pa-3">
+	<div class="item-picker pa-16">
 		<div><h1 id="title" ></h1></div><br>
 		<div>
 			<label for="add">Add in your options: </label><br>
@@ -9,7 +9,7 @@
 		</div><br>
 		<div v-if="items.length > 0" >
 			<h2>Your item picked, should you choose to accept: <span id="picked" ></span></h2><br>
-			<div v-if="item.isShown" v-for="item in items" >
+			<div v-if="item.isShown" v-for="(item, i) in items" :key="i">
 				<v-container class="grey lighten-5">
 					<v-row no-gutters>
 						<v-col cols="12" sm="4" >

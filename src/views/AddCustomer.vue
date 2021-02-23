@@ -1,8 +1,8 @@
 <template>
-	<div class="pa-3" >
+	<div class="pa-16" >
 		<h2>Add Another Customer</h2>
 		<v-divider class="pa-2" ></v-divider>
-		<div id="customers" v-for="customer in customers" >
+		<div id="customers" v-for="(customer, i) in customers" :key="i">
 			<div>
 				<h3>Customer</h3>
 				<v-divider class="pa-2" ></v-divider>

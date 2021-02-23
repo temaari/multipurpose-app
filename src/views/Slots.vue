@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-3" >
+	<div class="pa-16" >
 		<base-layout>
 			<template v-slot:header>
 				<h1>Slot Implementations</h1>

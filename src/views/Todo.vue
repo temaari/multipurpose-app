@@ -4,7 +4,7 @@
 			v-model="newTaskTitle"
 			@click:append="addTask"
 			@keyup.enter="addTask"
-			class="pa-3"
+			class="pa-16"
 			outlined
 			label="Add Task"
 			append-icon="mdi-plus"

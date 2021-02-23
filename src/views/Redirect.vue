@@ -1,7 +1,8 @@
 <template>
-	<div class="pa-4" >
+	<div class="pa-16" >
 		<div class="pa-2" >
 			<h1>Please Select the way you want to redirect</h1>
+			<v-divider class="pa-2" ></v-divider>
 		</div><br> 
 		<div class="card pa-2" >
 			<label class="title pa-2" for="link">Redirect On Same Page</label><br>

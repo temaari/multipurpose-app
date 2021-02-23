@@ -1,5 +1,5 @@
 <template>
-	<div class="movie-picker pa-3">
+	<div class="movie-picker pa-16">
 		<random-generator :number="number" :key="componentKey" /><br>
 		<button class="btn" @click="forceRerender()" >Click me</button>
 	</div>

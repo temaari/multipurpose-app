@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-3">
+	<div class="pa-16">
 		<div><h1>Different types of input</h1><v-divider class="pa-2" ></v-divider></div>
 		<div><p>Select from the different text fields you can use starting with your class html or new vue components like 'v-text-field'</p></div>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="item-picker pa-3">
+	<div class="item-picker pa-16">
 		<div><h1 id="title" ></h1></div><br>
 		<div>
 			<label for="add">Add Players: </label><br>
@@ -8,7 +8,7 @@
 			<div v-if="isAddError" class="error" >Please enter a Valid Player Name</div>
 		</div><br>
 		<div v-if="players.length > 0" >
-			<div v-for="player in players" >
+			<div v-for="(player, i) in players" :key="i">
 				<v-container class="grey lighten-5">
 					<v-row no-gutters>
 						<v-col cols="12" sm="2" ><v-card class="pa-2" outlined tile >{{ player.name }}</v-card></v-col>

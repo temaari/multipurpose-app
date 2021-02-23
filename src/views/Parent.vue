@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-2 pt-5" >
+	<div class="pa-16 pt-5" >
 		<div>Parent Value: {{ inputValue }}</div>
 		<child-input v-model="inputValue" />
 		<v-divider class="pa-2" ></v-divider>

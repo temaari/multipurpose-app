@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-3" >
+	<div class="pa-16" >
 		<h1>Find things still to learn</h1>
 		<v-divider class="pa-2" ></v-divider>
 		

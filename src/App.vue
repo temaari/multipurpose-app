@@ -55,7 +55,7 @@
 <script>
 	export default {
 		data: () => ({
-			isProd: false,
+			isProd: true,
 			drawer: null,
 			items: [
 				{ title: 'Home', icon: 'mdi-home', to:'/'},

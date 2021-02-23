@@ -1,6 +1,6 @@
 <template>
-	<div class="pa-3 pt-10" >
-		<div class="calculator pa-3">
+	<div class="pa-16 pt-10" >
+		<div class="calculator pa-16">
 			<h1 class="pb-5" >Calculator</h1>
 			<input class="num pa-2" type="text" v-model="message" value="message" readonly="readonly"/>
 			<input class="num pa-2" type="number" v-model="number" value="number" readonly="readonly"/>
@@ -9,7 +9,7 @@
 				<button v-if="num === 10" :id="num-1" class="btn pa-1" @click="clickNumBtn(0)" >0</button>
 				<button v-else :id="num-1" class="btn pa-1" @click="clickNumBtn(num)" >{{ num }}</button>
 			</div>
-			<div class="pa-3">
+			<div class="pa-16">
 				<div class="btn-num pa-2" ><button class="btn btn-func" @click="clickOperation('+')" >+</button></div>
 				<div class="btn-num pa-2" ><button class="btn btn-func" @click="clickOperation('/')" >/</button></div>
 				<div class="btn-num pa-2" ><button class="btn btn-func" @click="clear()" >C</button></div>

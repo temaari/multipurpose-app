@@ -1,12 +1,12 @@
 <template>
-	<div class="pa-3">
+	<div class="pa-16">
 		<h1>Convert CSV to JSON</h1>
 		<v-divider class="pa-2" ></v-divider>
 		<div>
 			<button @click="defaultData(file)">Convert Default CSV to JSON</button>
 			<button @click="clear()">Clear</button>
 		</div>
-		<v-divider class="pa-3" ></v-divider>
+		<v-divider class="pa-16" ></v-divider>
 		<div class="text">
 			<textarea
 				id="csv" type="text" @input="getText()"
@@ -89,7 +89,7 @@
 		height: auto;
 	}
 	.text {
-		width: 50%;
+		width: 48%;
 		height: 200px;
 		float: left;
 		left: 0;
@@ -97,7 +97,7 @@
 		border: 1px dotted black;
 	}
 	.result {
-		width: 50%;
+		width: 51%;
 		height: auto;
 		float: right;
 		right: 0;
