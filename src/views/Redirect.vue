@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-16" >
+	<div class="pa-10" >
 		<div class="pa-2" >
 			<h1>Please Select the way you want to redirect</h1>
 			<v-divider class="pa-2" ></v-divider>

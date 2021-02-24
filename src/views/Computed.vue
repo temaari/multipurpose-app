@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-16" >
+	<div class="pa-10" >
 		<h1>The Reverse Computation Example</h1>
 		<p>Enter your message in the input box and then see your message in reverse</p>
 		<input type="text" v-model="message" /><br>

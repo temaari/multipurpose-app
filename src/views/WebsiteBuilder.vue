@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-16">
+	<div class="pa-10">
 		<builder-template :elements="elements">
 			<template #header><h1>This is the header</h1></template>
 

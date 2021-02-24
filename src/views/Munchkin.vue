@@ -1,5 +1,5 @@
 <template>
-	<div class="item-picker pa-16">
+	<div class="item-picker pa-10">
 		<div><h1 id="title" ></h1></div><br>
 		<div>
 			<label for="add">Add Players: </label><br>

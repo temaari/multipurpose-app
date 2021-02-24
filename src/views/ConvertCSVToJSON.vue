@@ -1,12 +1,13 @@
 <template>
-	<div class="pa-16">
+	<div class="pa-10">
 		<h1>Convert CSV to JSON</h1>
 		<v-divider class="pa-2" ></v-divider>
 		<div>
 			<button @click="defaultData(file)">Convert Default CSV to JSON</button>
 			<button @click="clear()">Clear</button>
+			<button @click="copy()">Copy JSON</button>
 		</div>
-		<v-divider class="pa-16" ></v-divider>
+		<v-divider class="pa-10" ></v-divider>
 		<div class="text">
 			<textarea
 				id="csv" type="text" @input="getText()"
@@ -30,6 +31,15 @@
 			}
 		},
 		methods: {
+			copy() {
+				let text = document.getElementById('json').innerText
+				let el = document.createElement("textarea")
+				document.body.appendChild(el)
+				el.value = text
+				el.select()
+				document.execCommand("copy")
+				document.body.removeChild(el)
+			},
 			clear() {
 				document.getElementById('json').innerText = null
 			},
@@ -39,24 +49,40 @@
 			defaultData(data) {
 				document.getElementById('json').innerText = this.convertCsvToJson(data)
 			},
+			removeQuotes(element) {
+				return element.replace(/\"/g, '')
+			},
+			validateParam(param) {
+				if (!param)
+					return null
+				if (
+					Number.isInteger(parseInt(param)) &&
+					!param.includes(':') &&
+					!param.includes('@') &&
+					param.charAt(0) !== '0'
+				) {
+					return this.removeQuotes(param)
+				}
+				return "\"" + this.removeQuotes(param) + "\""
+			},
 			convertCsvToJson(input) {
 				let rows = input.split('\n')
 
 				let jsonText = "["
 				rows.forEach((row, count) => {
 					if (count > 0) {
-						jsonText = jsonText + "\n \f {"
+						jsonText = jsonText + "\n {"
 
 						row.split(',').forEach((param, i) => {
-							jsonText = jsonText + "\n \f \f \""
-							jsonText = jsonText + rows[0].split(',')[i]
+							jsonText = jsonText + "\n \""
+							jsonText = jsonText + this.removeQuotes(rows[0].split(',')[i])
 							jsonText = jsonText + "\": "
-							jsonText = jsonText + (Number.isInteger(parseInt(param)) ? param : "\"" + param + "\"")
+							jsonText = jsonText + this.validateParam(param)
 							if (i !== row.split(',').length-1)
 								jsonText = jsonText + ","
 						})
 
-						jsonText = jsonText + "\n \f }"
+						jsonText = jsonText + "\n }"
 						if (count !== rows.length-1)
 							jsonText = jsonText + ","
 					}
