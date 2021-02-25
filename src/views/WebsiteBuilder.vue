@@ -11,7 +11,7 @@
 				<v-btn block @click="snackbar=!snackbar">Click me</v-btn>
 				<v-snackbar transition="scroll-y-transition" v-model="snackbar" :timeout="1000" :top="true">How Awesome</v-snackbar>
 			</template>
-			<template #main_2>Enter Your Code here</template>
+			<template #main_2>Enter Your Code here<br v-for="(i, k) in 25" :key="k"></template>
 
 			<template #footer><p>This is the footer</p></template>
 		</builder-template>

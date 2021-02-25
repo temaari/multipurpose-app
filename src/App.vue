@@ -25,7 +25,7 @@
 				<v-list-item
 					v-for="item in items"
 					:key="item.title"
-					:to="item.to"
+					@click="getUrl(item.to)"
 					link
 				>
 					<v-list-item-icon>
@@ -84,7 +84,11 @@
 		methods: {
 			isDev() {
 				return (new URL(window.location.href)).searchParams.get('env') === 'dev'
-			}
+			},
+			getUrl(route='') {
+				let params = this.isDev() ? '?env=dev' : ''
+				location.replace(location.protocol + '//' + location.host + route + params)
+			},
 		},
 	}
 </script>
