@@ -1,12 +1,7 @@
 <template>
 <div>
-	<div id="header"><slot name="header"><div>Header</div></slot></div><br>
-	<div :id="element['id']" v-for="(element, i) in elements" :key="i">
-		<v-divider class="pa-2"></v-divider>
-		<slot :name="'main_' + element['id']">
-			<div>Enter your code here</div><br v-for="(x,i) in 10" :key="i">
-		</slot>
-	</div>
+	<div id="header"><slot name="header"><div>Header</div></slot></div>
+	<div id="main" class="pa-8"><div :id="element" v-for="(element, i) in elements" :key="i"><slot :name="element"></slot></div></div>
 	<div id="footer"><slot name="footer"><div>Footer</div></slot></div>
 </div>
 </template>
@@ -19,10 +14,13 @@ export default {
 
 <style scoped>
 	#header {
-		padding: 12px;
+		height: 100px;
+		padding: 18px;
+		left: 0;
+		top: 0;
 		text-align: center;
-		background: rgb(184, 186, 199);
-		color: black;
+		background: rgb(7, 6, 96);
+		color: rgb(235, 235, 235);
 		font-size: 18px;
 	}
 	#footer {
@@ -31,8 +29,8 @@ export default {
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		background: rgb(184, 186, 199);
-		color: black;
+		background: rgb(7, 6, 96);
+		color: rgb(235, 235, 235);
 		text-align: center;
 	}
 </style>

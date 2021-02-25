@@ -1,7 +1,7 @@
 <template>
 	<v-app id="inspire">
 		<v-navigation-drawer
-			v-if="!isProd" 
+			v-if="isDev()" 
 			app
 			v-model="drawer"
 		>
@@ -39,7 +39,7 @@
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-app-bar app v-if="!isProd">
+		<v-app-bar app v-if="isDev()">
 			<v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
 			<v-toolbar-title>Application</v-toolbar-title>
@@ -47,16 +47,6 @@
 
 		<v-main>
 			<router-view></router-view>
-			<div class="pa-4" v-if="isHomePage()">
-				<h3>Quick Links To Apps</h3>
-				<v-divider></v-divider>
-				<span v-for="(item, i) in items" :key="i">
-					<a v-if="item.title != 'Home'" :href="'http://localhost:8080' + item.to">{{ item.title }}</a>
-					<span style="padding-left:20px">&nbsp;</span>
-					<br v-if="i % 3 === 0">
-				</span>
-				<v-btn block rounded @click="isProd=!isProd">Edit Page</v-btn>
-			</div>
 		</v-main>
 	</v-app>
 </template>
@@ -64,7 +54,6 @@
 <script>
 	export default {
 		data: () => ({
-			isProd: true,
 			drawer: null,
 			items: [
 				{ title: 'Home', icon: 'mdi-home', to:'/'},
@@ -93,8 +82,8 @@
 			],
 		}),
 		methods: {
-			isHomePage() {
-				return 'http://localhost:8080/' === window.location.href
+			isDev() {
+				return (new URL(window.location.href)).searchParams.get('env') === 'dev'
 			}
 		},
 	}

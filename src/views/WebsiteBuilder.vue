@@ -1,5 +1,5 @@
 <template>
-	<div class="pa-10">
+	<div>
 		<builder-template :elements="elements">
 			<template #header><h1>This is the header</h1></template>
 
@@ -11,7 +11,7 @@
 				<v-btn block @click="snackbar=!snackbar">Click me</v-btn>
 				<v-snackbar transition="scroll-y-transition" v-model="snackbar" :timeout="1000" :top="true">How Awesome</v-snackbar>
 			</template>
-			<template #main_2></template>
+			<template #main_2>Enter Your Code here</template>
 
 			<template #footer><p>This is the footer</p></template>
 		</builder-template>
@@ -25,11 +25,7 @@
 		data: () => {
 			return {
 				snackbar: false,
-				elements: [
-					{ id: 0 },
-					{ id: 1 },
-					{ id: 2 },
-				]
+				elements: [ 'main_0', 'main_1', 'main_2' ]
 			}
 		},
 		components: {
