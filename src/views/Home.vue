@@ -20,6 +20,7 @@
 			items: [
 				{ title: 'Study', to: 'Study' },
 				{ title: 'Website Builder', to: 'WebsiteBuilder' },
+				{ title: 'Animations', to: 'Animation' },
 				{ title: 'CSV to JSON', to: 'Convert' },
 				{ title: 'Input Selecter', to: 'InputSelecter' },
 				{ title: 'Todo', to: 'todo' },

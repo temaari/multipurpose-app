@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Animation',
+		name: 'Animation',
+		component: () => import('../views/Animation.vue')
+	},
+	{
 		path: '/Convert',
 		name: 'Convert',
 		component: () => import('../views/ConvertCSVToJSON.vue')
