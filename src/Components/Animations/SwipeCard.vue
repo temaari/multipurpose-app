@@ -2,30 +2,43 @@
 	<div>
 		<h3>Swipe Card</h3>
 		<v-divider class="pa-2"></v-divider>
-		<div id="container">
-			<div id="card"></div>
-		</div>
 		<div>
-			<button @click="move('left')">left</button>
-			<button @click="move('right')">right</button>
+			<div id="right"><p>Move the Card left or right by button</p></div>
+			<div id="left">
+				<div id="container">
+					<div id="card"></div>
+				</div>
+				<div>
+					<button @click="move('left')">left</button>
+					<button @click="move('right')">right</button>
+				</div>
+			</div>
 		</div>
-		<div id="message"></div>
 	</div>
 </template>
 
 <script>
 export default {
-	mounted() {
+	data: () => {
+		return {
+			pos: 75,
+		}
 	},
 	methods: {
 		move(direction) {
 			let id = null
 			let card = document.getElementById('card')
-			let pos = 75
+			let pos = this.pos
+			if (pos === 350) {
+				pos--
+			} else if (pos === (-200)) {
+				pos++
+			}
 			clearInterval(id)
 			setInterval(() => {
 				if (pos == 350 || pos == (-200)) {
 					clearInterval(id)
+					this.pos = pos
 				} else {
 					direction === 'left' ? pos-- : pos++
 					card.style.left = pos + "px"
@@ -37,6 +50,14 @@ export default {
 </script>
 
 <style scoped>
+	#left {
+		width: 50%;
+		float: left;
+	}
+	#right {
+		width: 50%;
+		float: right;
+	}
 	#container {
 		width: 400px;
 		height: 400px;

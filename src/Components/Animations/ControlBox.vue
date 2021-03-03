@@ -1,11 +1,16 @@
 <template>
-	<div>
+	<div class="pt-4" style="clear:both;">
 		<h3>Control Box</h3>
 		<v-divider class="pa-2"></v-divider>
 
-		<!-- Here is the container for the game -->
-		<div id="container">
-			<div id="box"></div>
+		<div>
+			<div id="right"><p>Use w,a,s,d to move box around</p></div>
+			<div id="left">
+				<!-- Here is the container for the game -->
+				<div id="container">
+					<div id="box"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -48,6 +53,14 @@ export default {
 </script>
 
 <style scoped>
+	#left {
+		width: 50%;
+		float: left;
+	}
+	#right {
+		width: 50%;
+		float: right;
+	}
 	#container {
 		width: 400px;
 		height: 400px;

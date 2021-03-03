@@ -1,11 +1,11 @@
 <template>
 	<div class="pa-5">
-		<h2>JS Animations with CSS</h2>
-		<v-divider class="pa-2"></v-divider>
+		<div id="header"><h2>JS Animations with CSS</h2><v-divider class="pa-2"></v-divider></div>
 		<div><p>This is to showcase my animation learnings with vue and javascript</p></div>
-		<swipe-card></swipe-card><br>
-		<basic-box></basic-box><br>
+		<swipe-card></swipe-card>
+		<basic-box></basic-box>
 		<control-box></control-box>
+		<div id="footer" class="pt-4" style="clear:both;"></div>
 	</div>
 </template>
 

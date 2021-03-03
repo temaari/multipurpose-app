@@ -1,10 +1,15 @@
 <template>
-	<div>
+	<div class="pt-4" style="clear:both;">
 		<h3>Basic Box</h3>
 		<v-divider class="pa-2"></v-divider>
-		<p><button @click="myMove()">Click me</button></p>
-		<div id="container">
-			<div id="animate"></div>
+		<div>
+			<div id="right"><p>Click the button or press space bar to move</p></div>
+			<div id="left">
+				<p><button @click="myMove()">Click me</button></p>
+				<div id="container">
+					<div id="animate"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -19,24 +24,24 @@ export default {
 		}
 	},
 	mounted() {
-		window.addEventListener('keypress', (event) => {
+		window.addEventListener('keyup', (event) => {
 			if (event.key == ' ')
 				this.myMove()
 		})
 	},
 	methods: {
 		myMove() {
-			this.id = null
-			this.animate = document.getElementById('animate')
-			this.pos = 0
-			clearInterval(this.id)
+			let id = null
+			let animate = document.getElementById('animate')
+			let pos = 0
+			clearInterval(id)
 			setInterval(() => {
-				if (this.pos == 350) {
-					clearInterval(this.id)
+				if (pos == 350) {
+					clearInterval(id)
 				} else {
-					this.pos++
-					this.animate.style.top = this.pos + "px"
-					this.animate.style.left = this.pos + "px"
+					pos++
+					animate.style.top = pos + "px"
+					animate.style.left = pos + "px"
 				}
 			}, 8)
 		},
@@ -45,6 +50,14 @@ export default {
 </script>
 
 <style scoped>
+	#left {
+		width: 50%;
+		float: left;
+	}
+	#right {
+		width: 50%;
+		float: right;
+	}
 	#container {
 		width: 400px;
 		height: 400px;
