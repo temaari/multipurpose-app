@@ -6,9 +6,7 @@
 			<div id="right"><p>Click the button or press space bar to move</p></div>
 			<div id="left">
 				<p><button @click="myMove()">Click me</button></p>
-				<div id="container">
-					<div id="animate"></div>
-				</div>
+				<div id="container"><div id="animate"></div></div>
 			</div>
 		</div>
 	</div>
@@ -35,7 +33,7 @@ export default {
 			let animate = document.getElementById('animate')
 			let pos = 0
 			clearInterval(id)
-			setInterval(() => {
+			id = setInterval(() => {
 				if (pos == 350) {
 					clearInterval(id)
 				} else {

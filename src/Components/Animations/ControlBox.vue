@@ -5,12 +5,7 @@
 
 		<div>
 			<div id="right"><p>Use w,a,s,d to move box around</p></div>
-			<div id="left">
-				<!-- Here is the container for the game -->
-				<div id="container">
-					<div id="box"></div>
-				</div>
-			</div>
+			<div id="left"><div id="container"><div id="box"></div></div></div>
 		</div>
 	</div>
 </template>

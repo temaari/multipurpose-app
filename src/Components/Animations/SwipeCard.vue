@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="pt-4" style="clear:both;">
 		<h3>Swipe Card</h3>
 		<v-divider class="pa-2"></v-divider>
 		<div>
@@ -25,6 +25,11 @@ export default {
 		}
 	},
 	methods: {
+		replaceCard() {
+			let card = document.getElementById('card')
+			card.style.left = "75px"
+			this.pos = 75
+		},
 		move(direction) {
 			let id = null
 			let card = document.getElementById('card')
@@ -35,10 +40,10 @@ export default {
 				pos++
 			}
 			clearInterval(id)
-			setInterval(() => {
+			id = setInterval(() => {
 				if (pos == 350 || pos == (-200)) {
 					clearInterval(id)
-					this.pos = pos
+					this.replaceCard()
 				} else {
 					direction === 'left' ? pos-- : pos++
 					card.style.left = pos + "px"
