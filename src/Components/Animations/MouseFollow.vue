@@ -17,10 +17,10 @@ export default {
 	},
 	methods: {
 		moveMouse(mouse, x, y) {
-			if (x > 0 && x < 350) {
+			if (x > -5 && x < 355) {
 				mouse.style.left = x + "px"
 			}
-			if (y > 0 && y < 350) {
+			if (y > -5 && y < 355) {
 				mouse.style.top = y + "px"
 			}
 		},

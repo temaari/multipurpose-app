@@ -21,7 +21,9 @@
 export default {
 	data: () => {
 		return {
+			cards: [ '1', '2', '3', '4'],
 			pos: 75,
+			count: 0,
 		}
 	},
 	methods: {
@@ -29,6 +31,10 @@ export default {
 			let card = document.getElementById('card')
 			card.style.left = "75px"
 			this.pos = 75
+			card.innerHTML = this.cards[this.count]
+			this.count++
+			if (this.count === this.cards.length)
+				this.count = 0
 		},
 		move(direction) {
 			let id = null
