@@ -11,18 +11,22 @@
 <script>
 export default {
 	mounted() {
-		document.getElementById('container').onmousemove = (event) => {
-			this.moveMouse(document.getElementById('mouse'), event.clientX - 40, event.clientY - 200)
+		document.onmousemove = (event) => {
+			this.moveMouse(event.clientX, event.clientY)
 		}
 	},
 	methods: {
-		moveMouse(mouse, x, y) {
-			if (x > -5 && x < 355) {
-				mouse.style.left = x + "px"
-			}
-			if (y > -5 && y < 355) {
-				mouse.style.top = y + "px"
-			}
+		mouseInBounds(mouse, amount, direction) {
+			if (amount >= 0 && amount <= 350) {
+				mouse.style[direction] = amount + "px"
+			} else if (amount < 0) {
+				mouse.style[direction] = "0px"
+			} else if (amount > 350)
+				mouse.style[direction] = "350px"
+		},
+		moveMouse(x, y) {
+			this.mouseInBounds(document.getElementById('mouse'), x - 40, 'left')
+			this.mouseInBounds(document.getElementById('mouse'), y - 200, 'top')
 		},
 	}
 }
