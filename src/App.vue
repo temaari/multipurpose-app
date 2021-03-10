@@ -58,6 +58,7 @@
 			items: [
 				{ title: 'Home', icon: 'mdi-home', to:'/'},
 				{ title: 'Study', icon: 'mdi-school', to: '/Study' },
+				{ title: 'Tabs', icon: 'mdi-school', to: '/Tabs' },
 				{ title: 'Animation', icon: 'mdi-transition', to: '/Animation' },
 				{ title: 'Website Builder', icon: 'mdi-wrench', to: '/WebsiteBuilder' },
 				{ title: 'CSV to JSON', icon: 'mdi-car-convertible', to: '/Convert' },

@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Tabs',
+		name: 'Tabs',
+		component: () => import('../views/Tabs.vue')
+	},
+	{
 		path: '/Animation',
 		name: 'Animation',
 		component: () => import('../views/Animation.vue')
