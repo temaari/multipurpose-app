@@ -19,7 +19,7 @@
 		data: () => ({
 			items: [
 				{ title: 'Study', to: 'Study' },
-				{ title: 'Tabs', to: 'Tabs' },
+				{ title: 'Dino', to: 'Dino' },
 				{ title: 'Website Builder', to: 'WebsiteBuilder' },
 				{ title: 'Animations', to: 'Animation' },
 				{ title: 'CSV to JSON', to: 'Convert' },

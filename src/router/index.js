@@ -16,9 +16,9 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
-		path: '/Tabs',
-		name: 'Tabs',
-		component: () => import('../views/Tabs.vue')
+		path: '/Dino',
+		name: 'Dino',
+		component: () => import('../views/Dino.vue')
 	},
 	{
 		path: '/Animation',
