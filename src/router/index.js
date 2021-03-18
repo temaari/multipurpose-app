@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/InputConversion',
+		name: 'InputConversion',
+		component: () => import('../views/InputConversion.vue')
+	},
+	{
 		path: '/Dino',
 		name: 'Dino',
 		component: () => import('../views/Dino.vue')
