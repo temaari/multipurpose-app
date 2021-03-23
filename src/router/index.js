@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Editor',
+		name: 'Editor',
+		component: () => import('../views/Editor.vue')
+	},
+	{
 		path: '/InputConversion',
 		name: 'InputConversion',
 		component: () => import('../views/InputConversion.vue')
