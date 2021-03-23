@@ -40,7 +40,7 @@
 			</current-user><br>
 
 			<custom-component>
-				<template v-slot:custom>
+				<template v-slot:custom_slot>
 					<div>This is some custom HTML to go in</div>
 				</template>
 			</custom-component>

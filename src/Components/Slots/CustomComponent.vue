@@ -2,7 +2,7 @@
 	<div>
 		<div><basic-html /></div>
 		<div>
-			<slot name="custom" ></slot>
+			<slot name="custom_slot" ></slot>
 		</div><br>
 	</div>
 </template>
