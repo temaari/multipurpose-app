@@ -2,25 +2,13 @@
 	<div class="main">
 		<div class="login">
 			<div class="form">
-				<div class="username">
-					<label for="username">Username/Email</label>
-					<input
-						v-model="username"
-						@keyup.enter="submit()"
-						type="email"
-						name="username"
-						id="username"
-						placeholder="Enter username/email"/>
+				<div class="input">
+					<input v-model="username" @keyup.enter="submit()" type="email" name="username" id="username" placeholder=""/>
+					<label for="username">Username</label>
 				</div>
-				<div class="password">
+				<div class="input">
+					<input v-model="password" @keyup.enter="submit()" type="password" name="password" id="password" placeholder=""/>
 					<label for="password">Password</label>
-					<input
-						v-model="password"
-						@keyup.enter="submit()"
-						type="password"
-						name="password"
-						id="password"
-						placeholder="Enter password"/>
 				</div>
 				<input @click="submit()" class="button" type="button" value="Save"/>
 				<input @click="logout()" class="button" type="button" value="logout"/>
@@ -112,19 +100,33 @@ export default {
 		border: 1px solid rgb(160, 170, 160);
 	}
 
+	.form .input {
+		position: relative;
+		overflow: hidden;
+	}
 	.form label {
+		top: 0;
+		left: 0;
+		position: absolute;
 		display: inline-block;
 		width: 100px;
 		text-align: left;
 		margin: 0 5rem 1.75rem 0;
 	}
 	.form input {
+		position: relative;
 		margin: 0 5rem 1.75rem 0;
 		padding: 0 0 0 0.2rem;
 		outline: none;
 		width: auto;
+		height: 40px;
 		display: inline-block;
 		border-bottom: 0.1rem solid rgb(160, 170, 160);
+	}
+	.form input:focus + label {
+		top: 0;
+		color: black;
+		font-size: 60%;
 	}
 	.form .button {
 		border: 0;
