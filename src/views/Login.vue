@@ -3,11 +3,11 @@
 		<div class="login">
 			<div class="form">
 				<div class="input">
-					<input v-model="username" @keyup.enter="submit()" type="email" name="username" id="username" placeholder=""/>
+					<input v-model="username" @keyup.enter="submit()" type="email" name="username" id="username" placeholder="" required/>
 					<label for="username">Username</label>
 				</div>
 				<div class="input">
-					<input v-model="password" @keyup.enter="submit()" type="password" name="password" id="password" placeholder=""/>
+					<input v-model="password" @keyup.enter="submit()" type="password" name="password" id="password" placeholder="" required/>
 					<label for="password">Password</label>
 				</div>
 				<input @click="submit()" class="button" type="button" value="Save"/>
