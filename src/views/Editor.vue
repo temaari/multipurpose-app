@@ -20,7 +20,6 @@ export default {
 			var jsCode = "<script>" + document.getElementById("jsCode").value + "<\/script>"
 			var frame = document.getElementById("preview-window").contentWindow.document;
 			frame.open();
-			console.log(jsCode)
 			frame.write(htmlCode+cssCode+jsCode)
 			frame.close();
 		},
