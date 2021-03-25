@@ -21,6 +21,7 @@
 				{ title: 'Study', to: 'Study' },
 				{ title: 'Dino', to: 'Dino' },
 				{ title: 'Editor', to: 'Editor' },
+				{ title: 'Label', to: 'Label' },
 				{ title: 'Login', to: 'Login' },
 				{ title: 'InputConversion', to: 'InputConversion' },
 				{ title: 'Website Builder', to: 'WebsiteBuilder' },
