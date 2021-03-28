@@ -19,6 +19,7 @@
 		data: () => ({
 			items: [
 				{ title: 'Study', to: 'Study' },
+				{ title: 'Articulate', to: 'Articulate' },
 				{ title: 'Dino', to: 'Dino' },
 				{ title: 'Editor', to: 'Editor' },
 				{ title: 'Label', to: 'Label' },
