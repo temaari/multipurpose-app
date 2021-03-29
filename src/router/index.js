@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Allvue',
+		name: 'Allvue',
+		component: () => import('../views/Allvue.vue')
+	},
+	{
 		path: '/Articulate',
 		name: 'Articulate',
 		component: () => import('../views/Articulate.vue')
