@@ -13,7 +13,9 @@
 			<section>
 				<div class="container">
 					<div class="split">
-						<input class="start-date" type="date">
+						<div class="start-date">
+							<date-picker class="date-picker" input-class="input-class" type="date" format="DD/MM/YYYY" title-format="DD/MM/YYYY" placeholder="dd/mm/yyyy" />
+						</div>
 						<div class="amount">
 							<p>Amount</p>
 							<h3><span>${{ Amount }}</span></h3>
@@ -26,9 +28,15 @@
 </template>
 
 <script>
+import DatePicker from 'vue2-datepicker'
+import 'vue2-datepicker/index.css'
 export default {
+	components: {
+		DatePicker,
+	},
 	data: () => {
 		return {
+			basic: '',
 			Type: 'Monthly',
 			Amount: 0,
 			MonthlyAmount: 80,
@@ -43,7 +51,7 @@ export default {
 		clickType(type) {
 			this.Type = type
 			this.Amount = this[type+'Amount'].toFixed(2)
-		}
+		},
 	}
 }
 </script>
@@ -83,6 +91,21 @@ export default {
 		border: none;
 	}
 
+	.date-picker {
+		margin-inline: auto;
+		border-bottom: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		width: auto;
+		padding: 1rem 1rem;
+		outline: none;
+	}
+
+	.input-class {
+		outline: none;
+		border: none;
+	}
+
 	.amount {
 		background: rgb(210, 210, 230);
 		padding: 1rem 1rem;
@@ -110,6 +133,10 @@ export default {
 		}
 		.start-date {
 			width: 70%;
+			padding-top: 1rem;
+		}
+		.date-picker {
+			width: 95%;
 		}
 		.amount {
 			width: 30%;
