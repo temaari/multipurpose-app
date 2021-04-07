@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/SmoothPay.vue')
 	},
 	{
+		path: '/DateCode',
+		name: 'DateCode',
+		component: () => import('../views/DateCode.vue')
+	},
+	{
 		path: '/Allvue',
 		name: 'Allvue',
 		component: () => import('../views/Allvue.vue')
