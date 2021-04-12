@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Learn',
+		name: 'Learn',
+		component: () => import('../views/Learn.vue')
+	},
+	{
 		path: '/SmoothPay',
 		name: 'SmoothPay',
 		component: () => import('../views/SmoothPay.vue')

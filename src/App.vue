@@ -58,6 +58,7 @@
 			items: [
 				{ title: 'Home', icon: 'mdi-home', to:'/'},
 				{ title: 'Study', icon: 'mdi-school', to: '/Study' },
+				{ title: 'Learning', icon: 'mdi-Learn', to: '/Learn' },
 				{ title: 'Login Page', icon: 'mdi-login', to: '/Login' },
 				{ title: 'SmoothPay', icon: 'mdi-vuetify', to: '/SmoothPay' },
 				{ title: 'Allvue', icon: 'mdi-vuetify', to: '/Allvue' },
