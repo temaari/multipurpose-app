@@ -21,6 +21,8 @@
 				{ title: 'Study', to: 'Study' },
 				{ title: 'Articulate', to: 'Articulate' },
 				{ title: 'Learn', to: 'Learn' },
+				{ title: 'Modal', to: 'Modal' },
+				{ title: 'Budget', to: 'Budget' },
 				{ title: 'Display Flex', to: 'DisplayFlex' },
 				{ title: 'Dino', to: 'Dino' },
 				{ title: 'SmoothPay', to: 'SmoothPay' },

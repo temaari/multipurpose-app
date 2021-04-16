@@ -16,9 +16,19 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Modal',
+		name: 'Modal',
+		component: () => import('../views/Modal.vue')
+	},
+	{
 		path: '/Learn',
 		name: 'Learn',
 		component: () => import('../views/Learn.vue')
+	},
+	{
+		path: '/Budget',
+		name: 'Budget',
+		component: () => import('../views/Budget.vue')
 	},
 	{
 		path: '/DisplayFlex',
