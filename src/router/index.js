@@ -21,6 +21,11 @@ const routes = [
 		component: () => import('../views/Learn.vue')
 	},
 	{
+		path: '/DisplayFlex',
+		name: 'DisplayFlex',
+		component: () => import('../views/DisplayFlex.vue')
+	},
+	{
 		path: '/SmoothPay',
 		name: 'SmoothPay',
 		component: () => import('../views/SmoothPay.vue')

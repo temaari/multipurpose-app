@@ -21,6 +21,7 @@
 				{ title: 'Study', to: 'Study' },
 				{ title: 'Articulate', to: 'Articulate' },
 				{ title: 'Learn', to: 'Learn' },
+				{ title: 'Display Flex', to: 'DisplayFlex' },
 				{ title: 'Dino', to: 'Dino' },
 				{ title: 'SmoothPay', to: 'SmoothPay' },
 				{ title: 'Allvue', to: 'Allvue' },
