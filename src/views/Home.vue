@@ -3,14 +3,15 @@
 		<h1>Home App</h1>
 		<v-divider class="pa-2" ></v-divider>
 		<p>Hopefully I'll be able to create some pretty cool Apps and ideas</p>
-			<h3>Quick Links To Apps</h3>
-			<v-divider></v-divider><br>
-			<span v-for="(item, i) in items" :key="i">
-				<a v-if="item.title != 'Home'" :href="getUrl(item.to)">{{ item.title }}</a>
-				<span style="padding-left:20px">&nbsp;</span>
-				<br v-if="i % 3 === 0 && i !== 0">
-			</span><br>
-			<v-btn block rounded @click="toggleEnv()"><span id="btn">Toggle Env</span></v-btn>
+		<h3>Quick Links To Apps</h3>
+		<v-divider></v-divider><br>
+		<div class="container">
+			<div class="container-item" v-for="(item, i) in items" :key="i">
+				<span><a :href="getUrl(item.to)">{{ item.title }}</a></span>
+			</div>
+		</div>
+		<p>&nbsp;</p>
+		<v-btn block rounded @click="toggleEnv()"><span id="btn">Toggle Env</span></v-btn>
 	</div>
 </template>
 
@@ -71,3 +72,13 @@
 		}
 	}
 </script>
+
+<style scoped>
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.container-item {
+		flex: 0 1 30ch;
+	}
+</style>
