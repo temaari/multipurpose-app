@@ -1,46 +1,37 @@
 <template>
 	<div class="main">
-		<div class="header">
-			<h1>Budget</h1>
-		</div>
-		<div class="container headers">
-			<div class="container-item title"><p>Income</p></div>
-			<div class="container-item title"><p>Expenses</p></div>
-			<div class="container-item title"><p>Savings</p></div>
-		</div>
+		<div class="header"><h1>Budget</h1></div>
 		<div class="container">
-			<div class="container-item TotalIncome"><span>Total Income&nbsp;</span><input @click="select" type="number" @blur="formatAmount('TotalIncome')" v-model="TotalIncome" placeholder="100.00"></div>
-			<div class="container-item TotalExpenses"><span>Total Expenses&nbsp;</span><input @click="select" readonly type="number" v-model="TotalExpenses" placeholder="100.00"></div>
-			<div class="container-item TotalSavings"><span>Total Savings&nbsp;</span><input @click="select" readonly type="number" v-model="TotalSavings" placeholder="100.00"></div>
-		</div>
-		<p class="divider">&nbsp;</p>
-
-		<div class="container">
-			<div class="container-item income">
-				<div>
-					<div class=""><input type="text" placeholder="Details"><input @click="select" type="number" readonly></div>
-					<div class=""><input type="text" placeholder="Details"><input @click="select" type="number" readonly></div>
+			<div class="container-item component">
+				<div class=""><p>Income</p></div>
+				<div class=""><span>Total Income&nbsp;</span><input @click="select" type="number" @blur="formatAmount('TotalIncome')" v-model="TotalIncome" placeholder="100.00"></div>
+				<div class="component-container">
+					<div class="component-item"><input type="text" placeholder="Details"><input @click="select" type="number" readonly></div>
+					<div class="component-item"><input type="text" placeholder="Details"><input @click="select" type="number" readonly></div>
 				</div>
+				<p class="divider">&nbsp;</p>
+				<div class="total-amount"><span>Total Income&nbsp;</span><input @click="select" type="number" @blur="formatAmount('TotalIncome')" v-model="TotalIncome" placeholder="100.00"></div>
 			</div>
-			<div class="container-item expense">
-				<div>
-					<div class="ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense1')" v-model="Expense1" placeholder="100.00"></div>
-					<div class="ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense2')" v-model="Expense2" placeholder="100.00"></div>
-					<div class="ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense3')" v-model="Expense3" placeholder="100.00"></div>
-					<div class="ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense4')" v-model="Expense4" placeholder="100.00"></div>
-					<div class="ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense5')" v-model="Expense5" placeholder="100.00"></div>
-				</div> 
+			<div class="container-item component">
+				<div class="title"><p>Expenses</p></div>
+				<div class="gross-amount"><span>Total Expenses&nbsp;</span><input @click="select" readonly type="number" v-model="TotalExpenses" placeholder="100.00"></div>
+				<div class="component-container">
+					<div class="component-item ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense1')" v-model="Expense1" placeholder="100.00"></div>
+					<div class="component-item ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense2')" v-model="Expense2" placeholder="100.00"></div>
+					<div class="component-item ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense3')" v-model="Expense3" placeholder="100.00"></div>
+					<div class="component-item ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense4')" v-model="Expense4" placeholder="100.00"></div>
+					<div class="component-item ExpenseInput"><input type="text" placeholder="Details"><input @click="select" type="number" @blur="formatAmount('Expense5')" v-model="Expense5" placeholder="100.00"></div>
+				</div>
+				<p class="divider">&nbsp;</p>
+				<div class="total-amount TotalExpenses"><span>Total Expenses&nbsp;</span><input @click="select" readonly type="number" v-model="TotalExpenses" placeholder="100.00"></div>
 			</div>
-			<div class="container-item savings">
-				<div></div>
+			<div class="container-item component">
+				<div class="title"><p>Savings</p></div>
+				<div class="gross-amount TotalSavings"><span>Total Savings&nbsp;</span><input @click="select" readonly type="number" v-model="TotalSavings" placeholder="100.00"></div>
+				<div class="savings"><div></div></div>
+				<p class="divider">&nbsp;</p>
+				<div class="total-amount TotalSavings"><span>Total Savings&nbsp;</span><input @click="select" readonly type="number" v-model="TotalSavings" placeholder="100.00"></div>
 			</div>
-		</div>
-
-		<p class="divider">&nbsp;</p>
-		<div class="container">
-			<div class="container-item TotalIncome"><span>Total Income&nbsp;</span><input @click="select" readonly type="number" @blur="formatAmount('TotalIncome')" v-model="TotalIncome" placeholder="100.00"></div>
-			<div class="container-item TotalExpenses"><span>Total Expenses&nbsp;</span><input @click="select" readonly type="number" v-model="TotalExpenses" placeholder="100.00"></div>
-			<div class="container-item TotalSavings"><span>Total Savings&nbsp;</span><input @click="select" readonly type="number" v-model="TotalSavings" placeholder="100.00"></div>
 		</div>
 	</div>
 </template>
@@ -102,6 +93,7 @@ export default {
 	.main {
 		margin: 1.75rem;
 	}
+
 	.container {
 		display: flex;
 		flex-wrap: wrap;
@@ -119,6 +111,20 @@ export default {
 	}
 	.container-item input[type= text] {
 		text-align: left;
+	}
+
+	.component .component-item,
+	.component .gross-amount,
+	.component .total-amount{
+		display: flex;
+	}
+	.component .component-item,
+	.component .gross-amount > *,
+	.component .total-amount > * {
+		flex: 1 1 50%;
+	}
+	.component-item input {
+		width: 50%;
 	}
 	.divider {
 		margin-top: 1rem;
