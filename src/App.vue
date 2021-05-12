@@ -61,6 +61,7 @@
 				{ title: 'Budget', icon: 'mdi-cash', to: '/Budget' },
 				{ title: 'Modal', icon: 'mdi-globe-model', to: '/Modal' },
 				{ title: 'Learning', icon: 'mdi-school-outline', to: '/Learn' },
+				{ title: 'Storage', icon: 'mdi-sd', to: '/Storage' },
 				{ title: 'Display Flex', icon: 'mdi-arm-flex', to: '/DisplayFlex' },
 				{ title: 'Login Page', icon: 'mdi-login', to: '/Login' },
 				{ title: 'SmoothPay', icon: 'mdi-vuetify', to: '/SmoothPay' },

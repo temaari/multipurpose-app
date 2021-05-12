@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Storage',
+		name: 'Storage',
+		component: () => import('../views/Storage.vue')
+	},
+	{
 		path: '/Modal',
 		name: 'Modal',
 		component: () => import('../views/Modal.vue')
