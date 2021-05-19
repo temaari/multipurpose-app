@@ -7,7 +7,7 @@
 		<v-divider></v-divider><br>
 		<div class="container">
 			<div class="container-item" v-for="(item, i) in items" :key="i">
-				<span><a :href="getUrl(item.to)">{{ item.title }}</a></span>
+				<span><a :href="item.to">{{ item.title }}</a></span>
 			</div>
 		</div>
 		<p>&nbsp;</p>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+	import { setStoreValue, getStoreValue, removeStoreValue } from '../components/Common'
 	export default {
 		data: () => ({
 			items: [
@@ -58,17 +59,9 @@
 			],
 		}),
 		methods: {
-			isDev() {
-				return (new URL(window.location.href)).searchParams.get('env') === 'dev'
-			},
-			setUrl(route='', params='') {
-				return location.protocol + '//' + location.host + '/' + route + params
-			},
-			getUrl(route='') {
-				return this.setUrl(route, (this.isDev() ? '?env=dev' : ''))
-			},
 			toggleEnv() {
-				location.replace(this.setUrl('', (!this.isDev() ? '?env=dev' : '')))
+				getStoreValue("isDevEnv") == null ? setStoreValue("isDevEnv", "Y") : removeStoreValue("isDevEnv")
+				location.reload()
 			},
 		}
 	}

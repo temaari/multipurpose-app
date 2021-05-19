@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { setStoreValue, removeStoreValue } from '../components/Common'
 export default {
 	data: () => {
 		return {
@@ -70,7 +71,8 @@ export default {
 			return isValidated
 		},
 		logout() {
-			location.href = location.origin + location.pathname
+			removeStoreValue("isDevEnv")
+			location.reload()
 		},
 		submit() {
 			this.SaveError = null
@@ -79,13 +81,14 @@ export default {
 			if (this.validateInput()) {
 				setTimeout(() => {
 					if (this.verifyAccount()) {
-						location.href = location.href + '?env=dev'
+						setStoreValue("isDevEnv", "Y")
 						this.IsLoading = false
+						location.reload()
 					} else {
 						this.SaveError = "Invalid username or password"
 						this.IsLoading = false
 					}
-				}, 1000)
+				}, 500)
 			} else
 				this.IsLoading = false
 		},
