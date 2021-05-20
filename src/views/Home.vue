@@ -21,6 +21,7 @@
 		data: () => ({
 			items: [
 				{ title: 'Study', to: 'Study' },
+				{ title: 'Market App', to: 'ihome' },
 				{ title: 'Articulate', to: 'Articulate' },
 				{ title: 'Learn', to: 'Learn' },
 				{ title: 'Modal', to: 'Modal' },
