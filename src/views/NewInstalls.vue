@@ -32,6 +32,16 @@
 				</div>
 			</div>
 		</div>
+
+		<h3>My Attempt</h3>
+		<v-divider class="pa-8"></v-divider>
+		<div>
+			<div class="switch-box" v-on:click="toggleSwitch()" ref="switch-box">
+				<div class="switch-button"></div>
+				<div class="switch-text">email</div>
+			</div>
+		</div>
+
 	</div>
 </template>
 
@@ -47,6 +57,23 @@ export default {
 			elem.style.top = '-50px'
 			elem.style.marginLeft = '12px'
 		})
+	},
+	methods: {
+		toggleSwitch() {
+			let switchBox = this.$refs['switch-box']
+			let switchText = switchBox.querySelector('.switch-text')
+			let switchButton = switchBox.querySelector('.switch-button')
+
+			if (switchBox.classList.contains('active')) {
+				switchBox.classList.remove('active')
+				switchText.classList.remove('active-text')
+				switchButton.classList.remove('active-button')
+			} else {
+				switchBox.classList.add('active')
+				switchText.classList.add('active-text')
+				switchButton.classList.add('active-button')
+			}
+		}
 	},
 	data: () => {
 		return {
@@ -84,5 +111,44 @@ export default {
 	}
 	.slider__label {
 		top: -30px;
+	}
+
+
+	.switch-box {
+		display: grid;
+		grid-auto-flow: column;
+		padding: 3px 3px;
+		box-shadow: 0 0 0 0;
+		border-radius: 25px;
+		width: 7.2em;
+		height: 3.3em;
+		color: white;
+		font-weight: 450;
+		background-color: rgb(191, 203, 217);
+		opacity: 1;
+	}
+	.switch-text {
+		text-align: center;
+		margin: auto;
+		font-size: 2.5ch;
+		width: auto;
+		order: 2;
+	}
+	.switch-button {
+		background-color: white;
+		width: 2.9em;
+		height: 2.9em;
+		border-radius: 50%;
+		transition: transform 300ms ease 0s;
+		order: 1;
+	}
+	.active {
+		background-color: rgb(117, 199, 145);
+	}
+	.active-button {
+		order: 2;
+	}
+	.active-text {
+		order: 1;
 	}
 </style>
