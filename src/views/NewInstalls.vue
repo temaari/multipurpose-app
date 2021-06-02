@@ -5,6 +5,22 @@
 		
 		<h3>Vue Slider</h3>
 		<v-divider class="pa-2" style="width: 50%" ></v-divider>
+		<div style="width: 50em;">
+			<vue-slider
+				v-model="vueSliderValue"
+				tooltip="always"
+				:tooltip-formatter="formatter"
+				:marks="marks"
+				:min="20"
+				:max="100">
+			</vue-slider>
+		</div><br><br>
+		<div><a href="https://nightcatsama.github.io/vue-slider-component/#/" target="_blank" >Vue Slider</a></div><br>
+		<div><a href="https://openbase.com/js/vue-slider-component/" target="_blank" >Components</a></div><br>
+		<div><a href="https://jsfiddle.net/NightCatSama/2xy72dod/10547" target="_blank" >Tutorials</a></div><br>
+
+		<h3>Custom Slider</h3>
+		<v-divider class="pa-2" style="width: 50%" ></v-divider>
 		<div style="width: 50em;"><custom-slider min="100" max="1000" v-model="value"></custom-slider></div>
 		<div><a href="https://www.npmjs.com/package/vue-custom-range-slider" target="_blank" >vue-custom-range-slider</a></div><br>
 
@@ -46,9 +62,12 @@
 </template>
 
 <script>
+import VueSlider from "vue-slider-component"
+import 'vue-slider-component/theme/antd.css'
 import CustomSlider from "vue-custom-range-slider";
 import { ToggleButton } from 'vue-js-toggle-button'
 import "vue-custom-range-slider/dist/vue-custom-range-slider.css";
+import {format} from '../components/Common'
 export default {
 	mounted() {
 		const sliderLabel = document.querySelectorAll(".slider__label")
@@ -77,6 +96,11 @@ export default {
 	},
 	data: () => {
 		return {
+			vueSliderValue: 50,
+			marks: val => val % 10 === 0,
+			formatter: val => {
+				return format(val)
+			},
 			label: { checked: 'on', unchecked: 'off' },
 			smsLabel: { checked: 'sms', unchecked: 'sms' },
 			emailLabel: { checked: 'email', unchecked: 'email' },
@@ -86,6 +110,7 @@ export default {
 		}
 	},
 	components: {
+		VueSlider,
 		CustomSlider,
 		ToggleButton
 	},

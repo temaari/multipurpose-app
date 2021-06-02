@@ -16,3 +16,7 @@ export function setSessionValue(key, value) {
 export function removeSessionValue(key) {
 	sessionStorage.removeItem(key)
 }
+
+export function format(value) {
+	return `$${value}`
+}
