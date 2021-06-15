@@ -59,6 +59,7 @@ import { getStoreValue } from './components/Common'
 			items: [
 				{ title: 'Home', icon: 'mdi-home', to:'/'},
 				{ title: 'Study', icon: 'mdi-school', to: '/Study' },
+				{ title: 'Pizza order app', icon: 'mdi-pizza', to: '/PizzaOrder' },
 				{ title: 'Marget App', icon: 'mdi-shopping-outline', to: '/ihome' },
 				{ title: 'Budget', icon: 'mdi-cash', to: '/Budget' },
 				{ title: 'Modal', icon: 'mdi-globe-model', to: '/Modal' },

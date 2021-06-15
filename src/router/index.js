@@ -136,6 +136,11 @@ const routes = [
 		component: () => import('../views/CalendarPicker.vue')
 	},
 	{
+		path: '/PizzaOrder',
+		name: 'PizzaOrder',
+		component: () => import('../views/PizzaOrder.vue')
+	},
+	{
 		path: '/AddCustomer',
 		name: 'AddCustomer',
 		component: () => import('../views/AddCustomer.vue')

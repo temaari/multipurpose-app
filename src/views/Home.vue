@@ -22,6 +22,7 @@
 			items: [
 				{ title: 'Study', to: 'Study' },
 				{ title: 'Market App', to: 'ihome' },
+				{ title: 'Pizza order app', to: 'PizzaOrder' },
 				{ title: 'Articulate', to: 'Articulate' },
 				{ title: 'Learn', to: 'Learn' },
 				{ title: 'Modal', to: 'Modal' },
