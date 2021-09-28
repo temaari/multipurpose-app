@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Chartjs',
+		name: 'Chartjs',
+		component: () => import('../views/Chartjs.vue')
+	},
+	{
 		path: '/NewInstalls',
 		name: 'NewInstalls',
 		component: () => import('../views/NewInstalls.vue')
