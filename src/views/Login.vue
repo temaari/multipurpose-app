@@ -1,7 +1,7 @@
 <template>
 	<div class="main">
 		<div v-if="!!SaveError" class="error"><strong>Error!</strong> {{ SaveError }}</div>
-		<h3>Account Loggin</h3>
+		<h3>Account Login</h3>
 		<div class="login">
 			<form class="form">
 				<div class="username">
