@@ -16,6 +16,11 @@ const routes = [
 		component: () => import('../views/Todo.vue')
 	},
 	{
+		path: '/Scopa',
+		name: 'ScopaScorer',
+		component: () => import('../views/ScopaScorer.vue')
+	},
+	{
 		path: '/Chartjs',
 		name: 'Chartjs',
 		component: () => import('../views/Chartjs.vue')
